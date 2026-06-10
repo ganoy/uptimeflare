@@ -23,7 +23,7 @@ const workerConfig: WorkerConfig = {
     // Example HTTP Monitor
     {
       // `id` should be unique, history will be kept if the `id` remains constant
-      id: 'foo_monitor1',
+      id: 'foo_monitor',
       // `name` is used at status page and callback message
       name: 'NN',
       // `method` should be a valid HTTP Method
@@ -57,25 +57,27 @@ const workerConfig: WorkerConfig = {
       // checkProxyFallback: true,
     },
     {
-      id: 'foo_monitor2',
+      id: 'foo_monitor',
       name: '6HDH',
       method: 'GET',
-      target: 'https://6h.gs'
+      target: 'https://6h.gs',
+      timeout: 10000,
     },
     {
-      id: 'foo_monitor3',
+      id: 'foo_monitor',
       name: 'BaiDu',
       method: 'GET',
-      target: 'https://www.baidu.com'
+      target: 'https://www.baidu.com',
+      timeout: 10000,
     },
   ],
   // [Optional] Notification settings
   notification: {
     // [Optional] Notification webhook settings, if not specified, no notification will be sent
     // More info at Wiki: https://github.com/lyc8503/UptimeFlare/wiki/Setup-notification
-    //webhook: {
+    webhook: {
       // [Required] webhook URL (example: Telegram Bot API)
-      //url: 'https://api.telegram.org/bot123456:ABCDEF/sendMessage',
+      url: 'https://api.telegram.org/bot123456:ABCDEF/sendMessage',
       // [Optional] HTTP method, default to 'GET' for payloadType=param, 'POST' otherwise
       // method: 'POST',
       // [Optional] headers to be sent
@@ -87,15 +89,15 @@ const workerConfig: WorkerConfig = {
       // 'param': append url-encoded payload to URL search parameters
       // 'json': POST json payload as body, set content-type header to 'application/json'
       // 'x-www-form-urlencoded': POST url-encoded payload as body, set content-type header to 'x-www-form-urlencoded'
-      //payloadType: 'x-www-form-urlencoded',
+      payloadType: 'x-www-form-urlencoded',
       // [Required] payload to be sent
       // $MSG will be replaced with the human-readable notification message
-      //payload: {
-       // chat_id: 12345678,
-      //  text: '$MSG',
-      //},
+      payload: {
+        chat_id: 12345678,
+        text: '$MSG',
+      },
       // [Optional] timeout calling this webhook, in millisecond, default to 5000
-      //timeout: 10000,
+      timeout: 10000,
     },
     // [Optional] timezone used in notification messages, default to "Etc/GMT"
     timeZone: 'Asia/Shanghai',
