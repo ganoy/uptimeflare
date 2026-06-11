@@ -70,6 +70,13 @@ const workerConfig: WorkerConfig = {
       target: 'https://www.baidu.com',
       timeout: 10000,
     },
+    {
+      id: 'foo_monitor',
+      name: 'Translation',
+      method: 'GET',
+      target: 'https://lan-trust.com/',
+      timeout: 10000,
+    },
   ],
   // [Optional] Notification settings
   notification: {
