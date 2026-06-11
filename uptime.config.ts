@@ -23,7 +23,7 @@ const workerConfig: WorkerConfig = {
     // Example HTTP Monitor
     {
       // `id` should be unique, history will be kept if the `id` remains constant
-      id: 'foo_monitor',
+      id: 'foo_ru05',
       // `name` is used at status page and callback message
       name: 'NN',
       // `method` should be a valid HTTP Method
@@ -57,21 +57,21 @@ const workerConfig: WorkerConfig = {
       // checkProxyFallback: true,
     },
     {
-      id: 'foo_monitor',
+      id: 'foo_6HDH',
       name: '6HDH',
       method: 'GET',
       target: 'https://6h.gs',
       timeout: 10000,
     },
     {
-      id: 'foo_monitor',
+      id: 'foo_BaiDu',
       name: 'BaiDu',
       method: 'GET',
       target: 'https://www.baidu.com',
       timeout: 10000,
     },
     {
-      id: 'foo_monitor',
+      id: 'foo_Translation',
       name: 'Translation',
       method: 'GET',
       target: 'https://lan-trust.com/',
